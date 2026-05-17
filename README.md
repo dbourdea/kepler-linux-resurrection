@@ -26,12 +26,14 @@ Applied the following parameters:
 - `nvidia-drm.modeset=1`: Enables hardware-level modesetting for Xorg stability.
 - `log_buf_len=1M`: Expanded diagnostic logging.
 
-## Phase 3: Scraper Re-Engineering
+## Phase 3: CUDA Legacy Integration (SUCCESS)
+- **Toolkit Version**: CUDA 11.4.4 (Final branch supporting Compute Capability 3.0).
+- **Isolation**: Installed with `--toolkit --no-opengl-libs` to prevent driver corruption.
+- **Compiler**: Bound to `gcc-11` and `g++-11` via `update-alternatives` for compatibility.
+- **Verification**: `nvcc --version` confirmed release 11.4.
+
+## Phase 4: Scraper Re-Engineering
 Concurrent with the driver work, the `euler-scraper` was rebuilt from a "weasel-grade" script into a production microservice:
 - **Concurrency Control**: Semaphore-based (1-instance limit).
 - **Network Optimization**: Blocked media/ads (70% bandwidth reduction).
 - **Stability**: Added a "Zombie-Killer" hard-timer for browser processes.
-
-## Next Steps: CUDA Legacy Integration
-- Installation of CUDA Toolkit 11.4 (Final branch with CC 3.0 support).
-- Path isolation to prevent overwriting the patched 470 driver.
