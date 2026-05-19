@@ -1,0 +1,4 @@
+#!/bin/bash
+# G++ CUDA Shield - Amelia PRO
+# Intercepts compiler calls to strip problematic glibc attributes and link C++ libs
+/usr/bin/g++-11 -D"__malloc__(...)"= -D"__attribute_malloc__=" "$@"
