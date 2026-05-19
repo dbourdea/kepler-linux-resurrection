@@ -1,6 +1,6 @@
 # Project: Kepler Linux Resurrection (GTX 760 on Kernel 7.0)
 
-![NVIDIA GeForce GTX 760](https://tpucdn.com/review/nvidia-geforce-gtx-760/images/card_front.jpg)
+![NVIDIA GeForce GTX 760](gtx760.jpg)
 
 ## Overview
 This document chronicles the successful restoration and hardening of a legacy NVIDIA GTX 760 (Kepler architecture) on Ubuntu 26.04 running Linux Kernel 7.0. Official support for this hardware ended with the 470 driver branch, which is natively incompatible with Kernel 7.0.
